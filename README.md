@@ -4,8 +4,11 @@ This repo is an example of how machine learning can be used to find Porphyry Cop
 
 ## Instructions 
 The main notebook, Muller_copper_prob.ipynb, can be used with the pre-made datasets.
+
 ***Muller_Bertrand_coregistered.pkl*** contains the full set of copper-deposits and their associated tectono-magmatic properites.
+
 ***Muller_Bertrand_coregistered_random.pkl*** contains a psudeo-random set of non-deposits with known tectono-magmatic properties that can be used for training.
+
 ***Muller_Bertrand_coregistered_sampleMuller0.pkl*** contains a set of points following the present day South American subduction zone and the correspoiding tectono-magmatic properites of those points. 
 
 The full set of data developed here (and age-grids) can be downloaded directly from https://www.dropbox.com/s/gm7ydn376jarkkf/Muller.zip?dl=0
@@ -15,11 +18,12 @@ Or you can make your own files by following the instructions in this readme and 
 ## Instructions if you want to do it your self.
 
 ### Load the Muller et al. 2016 rotation and topology files into GPlates and Export subduction topologies, as outlined in "convergence.py":
-*Load in plate polygons and rotation file to GPlates. Clcik on the export data button.
-*1. Export Resolved Topologies (CitcomS specific)
-*2. Shapefiles
-*3. ONLY select "Export all Plate Polygons to a single file"
-*and "Export Plate Polygon segments to files based on feature type..."
+
+* Load in plate polygons and rotation file to GPlates. Clcik on the export data button.
+* 1. Export Resolved Topologies (CitcomS specific)
+* 2. Shapefiles
+* 3. ONLY select "Export all Plate Polygons to a single file"
+* and "Export Plate Polygon segments to files based on feature type..."
 
 If you export all the timesteps you should have 
 
