@@ -1,10 +1,27 @@
 # AndesML
-Trying to find Porphyry Copper deposits in the Andes. Modified from the workflows of Butterworth, N., D. Steinberg, R. D. Müller, S. Williams, A. S. Merdith, and S. Hardy (2016), Tectonic environments of South American porphyry copper magmatism through time revealed by spatiotemporal data mining, Tectonics, 35, 2847–2862, doi:10.1002/2016TC004289
+This repo is an example of how machine learning can be used to find Porphyry Copper deposits in the Andes. Modified from the workflows of Butterworth, N., D. Steinberg, R. D. Müller, S. Williams, A. S. Merdith, and S. Hardy (2016), Tectonic environments of South American porphyry copper magmatism through time revealed by spatiotemporal data mining, Tectonics, 35, 2847–2862, doi:10.1002/2016TC004289
 
 
 ## Instructions 
+The main notebook, Muller_copper_prob.ipynb, can be used with the pre-made datasets.
+***Muller_Bertrand_coregistered.pkl*** contains the full set of copper-deposits and their associated tectono-magmatic properites.
+***Muller_Bertrand_coregistered_random.pkl*** contains a psudeo-random set of non-deposits with known tectono-magmatic properties that can be used for training.
+***Muller_Bertrand_coregistered_sampleMuller0.pkl*** contains a set of points following the present day South American subduction zone and the correspoiding tectono-magmatic properites of those points. 
 
-### Load the Muller et al. 2016 rotation and topology files into GPlates and Export subduction topologies as outlined in "convergence.py".
+The full set of data developed here (and age-grids) can be downloaded directly from https://www.dropbox.com/s/gm7ydn376jarkkf/Muller.zip?dl=0
+
+Or you can make your own files by following the instructions in this readme and other notebooks/scripts in this repo. 
+
+## Instructions if you want to do it your self.
+
+### Load the Muller et al. 2016 rotation and topology files into GPlates and Export subduction topologies, as outlined in "convergence.py":
+*Load in plate polygons and rotation file to GPlates. Clcik on the export data button.
+*1. Export Resolved Topologies (CitcomS specific)
+*2. Shapefiles
+*3. ONLY select "Export all Plate Polygons to a single file"
+*and "Export Plate Polygon segments to files based on feature type..."
+
+If you export all the timesteps you should have 
 
 ### Copy out all the line segments. 
 This hack is required because in some cases GPlates (the older versions did not do this) will split the topologies into "points" and "lines", we just want have to rename the "lines" files if this occurs for "convergence.py" to read. Use this bash snippet or similar to find and rename the shape files.
