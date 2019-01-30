@@ -21,7 +21,7 @@ A python environemt to get this to work can be made using
 set CONDA_FORCE_32BIT=1
 conda create -n pyforml_32 python=2.7
 conda activate pyforml_32
-conda install jupyter matplotlib scipy pyshp numpy scikit-learn
+conda install jupyter matplotlib scipy pyshp numpy scikit-learn=0.17
 ```
 Then make sure you install pygplates, on Windows I unzipped the 32 bit version then include this line before importing:
 ```
