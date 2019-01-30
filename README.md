@@ -15,6 +15,21 @@ The full set of data developed here (and age-grids) can be downloaded directly f
 
 Or you can make your own files by following the instructions in this readme and other notebooks/scripts in this repo. 
 
+A python environemt to get this to work can be made using
+
+```
+set CONDA_FORCE_32BIT=1
+conda create -n pyforml_32 python=2.7
+conda activate pyforml_32
+conda install jupyter matplotlib scipy pyshp numpy scikit-learn
+```
+Then make sure you install pygplates, on Windows I unzipped the 32 bit version then include this line before importing:
+```
+import sys
+sys.path.append("C:\pygplates_rev18_python27_win32")
+import pygplates
+```
+
 ## Instructions if you want to do it your self.
 
 ### Load the Muller et al. 2016 rotation and topology files into GPlates and Export subduction topologies, as outlined in "convergence.py":
